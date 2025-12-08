@@ -205,7 +205,7 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <Image
-                src="/GooglePlay-logo.svg"
+                src="/GooglePlay-Logo.svg"
                 alt="Get it on Google Play"
                 width={100}
                 height={50}
