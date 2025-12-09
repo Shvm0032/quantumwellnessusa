@@ -99,7 +99,7 @@ export default function Header() {
 
         {/* RIGHT SIDE (Cart + Login) */}
         <div className="flex gap-5 items-center text-white z-20">
-          <Link href="#" className="text-sm  hidden sm:block">DEVICES/SERVICES</Link>
+          <Link href="/devices" className="text-sm  hidden sm:block">DEVICES/SERVICES</Link>
           <ShoppingCart className="cursor-pointer" size={22} />
           <button className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-black transition">
             Login
@@ -182,7 +182,7 @@ export default function Header() {
           <Link href="#" className="block text-lg">
             REVIEWS
           </Link>
-          <Link href="#" className="block text-lg">
+          <Link href="/devices" className="block text-lg">
             DEVICES/SERVICES
           </Link>
         </div>

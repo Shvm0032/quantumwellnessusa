@@ -2,34 +2,47 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaYoutube, FaArrowUp } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [showTopButton, setShowTopButton] = useState(false);
+
+  // Scroll listener to show button after scrolling 300px
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowTopButton(true);
+      } else {
+        setShowTopButton(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const footerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   return (
-    <footer className="bg-[#70512E] text-white pt-14 pb-5">
+    <footer className="bg-[#e8e5e1] pt-14 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* GRID */}
         <motion.div
@@ -45,7 +58,7 @@ export default function Footer() {
           >
             <Link href="/">
               <Image
-                src="/quantum-logo.webp"
+                src="/black-logo.webp"
                 alt="Quantum Wellness Logo"
                 width={200}
                 height={60}
@@ -79,7 +92,7 @@ export default function Footer() {
           {/* 2️⃣ SERVICES */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h4 className="font-serif font-bold">Service Booking</h4>
-            <ul className="space-y-2 text-white/70">
+            <ul className="space-y-2 text-gray-600">
               <li>
                 <a href="#services" className="hover:text-white transition">
                   Appointments
@@ -111,7 +124,7 @@ export default function Footer() {
           {/* 3️⃣ USEFUL LINKS */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h4 className="font-serif font-bold">Useful Links</h4>
-            <ul className="space-y-2 text-white/70">
+            <ul className="space-y-2 text-gray-600">
               <li>
                 <a href="#about" className="hover:text-white transition">
                   Contact
@@ -144,28 +157,28 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="space-y-4">
             <h4 className="font-serif font-bold">Contact</h4>
 
-            <p className="text-white/70 flex items-center gap-3">
-              <MdEmail size={20} className="text-white" />
+            <p className="text-gray-600 flex items-center gap-3">
+              <MdEmail size={20} className="text-gray-600" />
               <a
                 href="mailto:Ryan@quantumwellnessusa.com"
-                className="hover:text-white transition"
+                className="hover:text-gray-800 transition"
               >
                 Ryan@quantumwellnessusa.com
               </a>
             </p>
 
-            <p className="text-white/70 flex items-center gap-3">
-              <FaPhoneAlt size={18} className="text-white" />
+            <p className="text-gray-600 flex items-center gap-3">
+              <FaPhoneAlt size={18} className="text-gray-600" />
               <a
                 href="tel:+13524258431"
-                className="hover:text-white transition"
+                className="hover:text-gray-800 transition"
               >
                 +13524258431
               </a>
             </p>
 
-            <p className="text-white/70 flex items-start gap-3">
-              <FaMapMarkerAlt size={20} className="text-white mt-1" />
+            <p className="text-gray-600 flex items-start gap-3">
+              <FaMapMarkerAlt size={20} className="text-gray-600" />
               <span>
                 1107 E Silver Springs Blvd,
                 <br />
@@ -214,15 +227,28 @@ export default function Footer() {
             </a>
           </div>
         </motion.div>
+      </div>
 
-        {/* COPYRIGHT */}
+      {/* COPYRIGHT */}
+      <div className="bg-[#70512E]">
         <motion.div
           variants={itemVariants}
-          className="pt-5 border-t border-white/10 text-center text-gray-100"
+          className="pt-5 pb-5 border-t border-white/10 text-center text-gray-100"
         >
           <p>&copy; {currentYear} Quantum Wellness. All rights reserved.</p>
         </motion.div>
       </div>
+
+      {/* Scroll to Top Button */}
+      {showTopButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 p-3 hover:cursor-pointer rounded-full bg-white text-[#70512E] shadow-lg  transition-all active:scale-95"
+          aria-label="Scroll to top"
+        >
+          <FaArrowUp size={20} />
+        </button>
+      )}
     </footer>
   );
 }

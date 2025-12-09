@@ -1,72 +1,160 @@
-"use client"
+"use client";
 
-import { Star } from "lucide-react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay, Pagination, Navigation } from "swiper"
-import "swiper/css"
-import "swiper/css/pagination"
-import "swiper/css/navigation"
-import { ChevronLeft, ChevronRight } from "lucide-react" // for arrow icons
+import { useRef, useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function Testimonials() {
+export default function TestimonialSection() {
   const testimonials = [
-    { name: "Sarah Mitchell", role: "Marketing Executive", content: "This program completely transformed my health. I feel stronger, more energetic, and happier than ever before.", rating: 5 },
-    { name: "James Rodriguez", role: "Business Owner", content: "The personalized approach and expert guidance made all the difference. Highly recommended for anyone serious about wellness.", rating: 5 },
-    { name: "Emily Chen", role: "Fitness Enthusiast", content: "The community here is amazing. Everyone is supportive and the coaches really care about your progress.", rating: 5 },
-    { name: "Emily Chen", role: "Fitness Enthusiast", content: "The community here is amazing. Everyone is supportive and the coaches really care about your progress.", rating: 5 },
-  ]
+    {
+      name: "John Carter",
+      review:
+        "Amazing experience! The service quality much better than expected.",
+      rating: 5,
+    },
+    {
+      name: "Ava Smith",
+      review: "Outstanding support and smooth process. Highly recommended!",
+      rating: 4,
+    },
+    {
+      name: "Michael Lee",
+      review: "Very professional team. Loved the overall experience.",
+      rating: 5,
+    },
+    {
+      name: "Sophia Johnson",
+      review: "Excellent quality and friendly staff. Will come again!",
+      rating: 4,
+    },
+    {
+      name: "Emma Wilson",
+      review: "Great service and amazing results!",
+      rating: 5,
+    },
+    {
+      name: "David Brown",
+      review: "Very satisfied with their work.",
+      rating: 4,
+    },
+  ];
+
+  const swiperRef = useRef(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Navigation buttons के लिए click handlers
+  const handlePrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const handleNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
 
   return (
-    <section id="testimonials" className="py-20 bg-background relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-4xl font-serif font-bold">What Our Clients Say</h2>
-          <div className="h-1 w-24 bg-primary mx-auto" />
+    <section className="py-16 w-full bg-[#FAF8F6] flex justify-center">
+      <div className="max-w-6xl w-full relative px-4 md:px-10 lg:px-4">
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold">What Our Customers Say</h2>
+          <div className="w-20 h-1 bg-yellow-500 mx-auto mt-3"></div>
         </div>
 
-        <Swiper
-          modules={[Autoplay, Pagination, Navigation]}
-          spaceBetween={30}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          navigation={{
-            nextEl: ".swiper-button-next-custom",
-            prevEl: ".swiper-button-prev-custom",
-          }}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index}>
-              <div className="p-8 bg-white rounded-lg border border-border hover:shadow-lg transition-shadow h-full flex flex-col justify-between">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, j) => (
-                    <Star key={j} className="w-5 h-5 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-foreground/70 mb-4 italic flex-1">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-serif font-bold">{testimonial.name}</p>
-                  <p className="text-sm text-foreground/60">{testimonial.role}</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
+        {/* Slider Container */}
+        <div className="relative">
+          {/* Custom Navigation Arrows */}
+          {/* Custom Navigation Arrows */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 sm:-left-6 hover:cursor-pointer md:-left-12 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full hover:bg-gray-50 transition-all active:scale-95"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft size={22} />
+          </button>
 
-          {/* Custom Navigation Buttons */}
-          <div className="swiper-button-prev-custom absolute top-1/2 -left-4 z-10 transform -translate-y-1/2 w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center cursor-pointer shadow hover:bg-gray-100">
-            <ChevronLeft className="w-5 h-5 text-gray-700" />
-          </div>
-          <div className="swiper-button-next-custom absolute top-1/2 -right-4 z-10 transform -translate-y-1/2 w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center cursor-pointer shadow hover:bg-gray-100">
-            <ChevronRight className="w-5 h-5 text-gray-700" />
-          </div>
-        </Swiper>
+          <button
+            onClick={handleNext}
+            className="absolute right-0 sm:-right-6 hover:cursor-pointer md:-right-12 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full hover:bg-gray-50 transition-all active:scale-95"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight size={22} />
+          </button>
+
+          {/* Slider */}
+          {isMounted && (
+            <Swiper
+              ref={swiperRef}
+              modules={[Autoplay, Navigation]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              loop={true}
+              speed={600}
+              spaceBetween={30}
+              slidesPerView={1}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 25,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+              }}
+              className="pb-2!"
+            >
+              {testimonials.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="bg-white p-6 rounded-xl shadow-md border flex flex-col h-full hover:shadow-lg transition-shadow duration-300 min-h-[220px]">
+                    {/* Rating */}
+                    <div className="flex space-x-1 mb-3">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star
+                          key={i}
+                          size={18}
+                          className={`${
+                            i < item.rating
+                              ? "text-yellow-500 fill-yellow-500"
+                              : "text-gray-300"
+                          }`}
+                        />
+                      ))}
+                    </div>
+
+                    {/* Review */}
+                    <p className="text-gray-600 text-lg mb-4 grow">
+                      "{item.review}"
+                    </p>
+
+                    {/* Name */}
+                    <h4 className="font-semibold text-xl text-gray-800">
+                      — {item.name}
+                    </h4>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+        </div>
       </div>
     </section>
-  )
+  );
 }

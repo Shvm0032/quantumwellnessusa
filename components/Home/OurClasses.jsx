@@ -22,7 +22,7 @@ export default function OurClasses() {
         <h2 className="text-3xl font-serif text-center mb-8">Our Classes</h2>
 
         {/* Controls */}
-        <div className="flex flex-wrap justify-between items-center mb-6 gap-4">
+        <div className="flex flex-wrap justify-between items-center mb-1 md:mb-5 gap-4">
           {/* Date Picker */}
           <div className="flex items-center gap-2">
             <button
@@ -76,13 +76,13 @@ export default function OurClasses() {
             year: "numeric",
           })}
         </div>
-        <div className="border border-t-0 rounded-b px-4 py-6 text-gray-700">
+        <div className="border border-t-0 rounded-b px-4 py-2 text-gray-700">
           {classes.length === 0 ? (
             <p className="text-center">No scheduled sessions.</p>
           ) : (
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {classes.map((cls, index) => (
-                <li key={index} className="flex justify-between items-center bg-gray-100 px-4 py-3 rounded shadow-sm">
+                <li key={index} className="flex justify-between items-center bg-gray-100 px-4 py-2 rounded shadow-sm">
                   <span className="font-semibold">{cls.time}</span>
                   <span>{cls.title}</span>
                   <span className="italic text-gray-600">{cls.instructor}</span>

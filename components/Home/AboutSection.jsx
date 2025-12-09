@@ -17,7 +17,7 @@ export default function AboutSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
         {/* Left Text */}
-        <div className="space-y-4 text-gray-700">
+        <div className="space-y-4 text-gray-700 order-2 md:order-1">
           <p>
             At our personal training and wellness center, we offer a wide range of services to help you achieve your health and fitness goals. Our approach focuses on holistic well-being, combining advanced therapies with personalized programs to enhance both mind and body.  
           </p>
@@ -30,7 +30,7 @@ export default function AboutSection() {
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center">
+        <div className="flex justify-center order-1 md:order-2">
           <img
             src="/about.jpg"
             alt="Wellness Image"

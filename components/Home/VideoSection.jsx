@@ -3,11 +3,11 @@
 export default function VideoBgSection() {
   return (
     <section
-      className="w-full relative bg-cover bg-center"
-      style={{ backgroundImage: "url('/home/bg-video.jpg')" }}
+      className="w-full relative bg-contain bg-left"
+      style={{ backgroundImage: "url('/home/bg-img-2.png')" }}
     >
       {/* Overlay with blur */}
-      <div className="w-full h-full py-24 flex justify-center items-center bg-white/20 backdrop-blur-sm">
+      <div className="w-full h-full py-24 flex justify-center items-center bg-white/10 ">
         <div className="w-full max-w-4xl px-4">
           <div className="relative aspect-video">
             <iframe
