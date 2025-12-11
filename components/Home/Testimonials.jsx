@@ -68,7 +68,7 @@ export default function TestimonialSection() {
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold">What Our Customers Say</h2>
-          <div className="w-20 h-1 bg-yellow-500 mx-auto mt-3"></div>
+          <div className="w-20 h-1 bg-[#8B4513] mx-auto mt-3"></div>
         </div>
 
         {/* Slider Container */}
@@ -123,7 +123,10 @@ export default function TestimonialSection() {
             >
               {testimonials.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="bg-white p-6 rounded-xl shadow-md border flex flex-col h-full hover:shadow-lg transition-shadow duration-300 min-h-[220px]">
+                  <div
+                    className="p-6 rounded-xl shadow-md border flex flex-col h-full hover:shadow-lg transition-shadow duration-300 min-h-[220px] bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: "url('/home/testi-1.png')" }}
+                  >
                     {/* Rating */}
                     <div className="flex space-x-1 mb-3">
                       {Array.from({ length: 5 }).map((_, i) => (
@@ -140,7 +143,7 @@ export default function TestimonialSection() {
                     </div>
 
                     {/* Review */}
-                    <p className="text-gray-600 text-lg mb-4 grow">
+                    <p className="text-gray-700 text-md mb-2 grow">
                       "{item.review}"
                     </p>
 

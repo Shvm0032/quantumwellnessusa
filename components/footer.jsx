@@ -70,19 +70,19 @@ export default function Footer() {
             <div className="flex gap-6 pt-4 items-center md:justify-center justify-start">
               <a
                 href="https://www.facebook.com/people/Quantum-Wellness/100069946674457/"
-                className="hover:text-white transition"
+                className="hover:text-[#70512E] transition"
               >
                 <FaFacebook size={22} />
               </a>
               <a
                 href="https://www.instagram.com/quantum_wellness_usa/"
-                className="hover:text-white transition"
+                className="hover:text-[#70512E] transition"
               >
                 <AiFillInstagram size={22} />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCn-GJSUTHzdSqg9K7oLWkDQ"
-                className="hover:text-white transition"
+                className="hover:text-[#70512E] transition"
               >
                 <FaYoutube size={22} />
               </a>
@@ -94,27 +94,27 @@ export default function Footer() {
             <h4 className="font-serif font-bold">Service Booking</h4>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <a href="#services" className="hover:text-white transition">
+                <a href="#services" className="hover:text-[#70512E] transition">
                   Appointments
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition">
+                <a href="#services" className="hover:text-[#70512E] transition">
                   Classes
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition">
+                <a href="#services" className="hover:text-[#70512E] transition">
                   Events
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition">
+                <a href="#services" className="hover:text-[#70512E] transition">
                   Schedule
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition">
+                <a href="#services" className="hover:text-[#70512E] transition">
                   Devices/Services
                 </a>
               </li>
@@ -126,27 +126,30 @@ export default function Footer() {
             <h4 className="font-serif font-bold">Useful Links</h4>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <a href="#about" className="hover:text-white transition">
+                <a href="#about" className="hover:text-[#70512E] transition">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="hover:text-white transition">
+                <a
+                  href="#testimonials"
+                  className="hover:text-[#70512E] transition"
+                >
                   Store
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white transition">
+                <a href="#contact" className="hover:text-[#70512E] transition">
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white transition">
+                <a href="#contact" className="hover:text-[#70512E] transition">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white transition">
+                <a href="#contact" className="hover:text-[#70512E] transition">
                   Terms of Use
                 </a>
               </li>
@@ -158,32 +161,44 @@ export default function Footer() {
             <h4 className="font-serif font-bold">Contact</h4>
 
             <p className="text-gray-600 flex items-center gap-3">
-              <MdEmail size={20} className="text-gray-600" />
+              <MdEmail size={20} className="text-[#70512E]" />
               <a
                 href="mailto:Ryan@quantumwellnessusa.com"
-                className="hover:text-gray-800 transition"
+                className="hover:text-[#70512E] transition"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Ryan@quantumwellnessusa.com
               </a>
             </p>
 
-            <p className="text-gray-600 flex items-center gap-3">
-              <FaPhoneAlt size={18} className="text-gray-600" />
+            <p className="text-gray-600 flex hover:text-[#70512E] items-center gap-3">
+              <FaPhoneAlt size={18} className="text-[#70512E] " />
               <a
                 href="tel:+13524258431"
-                className="hover:text-gray-800 transition"
+                className="hover:text-[#70512E] transition"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 +13524258431
               </a>
             </p>
 
             <p className="text-gray-600 flex items-start gap-3">
-              <FaMapMarkerAlt size={20} className="text-gray-600" />
-              <span>
-                1107 E Silver Springs Blvd,
-                <br />
-                Unit 5 Ocala, FL, USA 34470
-              </span>
+              <FaMapMarkerAlt size={20} className="text-[#70512E]" />
+              <a
+                href="https://www.google.com/maps?q=Quantum+Wellness,1107+E+Silver+Springs+Blvd,+Unit+5+,+Ocala,+Florida+34470,+USA"
+                className="hover:text-[#70512E] transition "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                <span>
+                  1107 E Silver Springs Blvd,
+                  <br />
+                  Unit 5 Ocala, FL, USA 34470
+                </span>
+              </a>
             </p>
           </motion.div>
         </motion.div>
@@ -233,7 +248,7 @@ export default function Footer() {
       <div className="bg-[#70512E]">
         <motion.div
           variants={itemVariants}
-          className="pt-5 pb-5 border-t border-white/10 text-center text-gray-100"
+          className="pt-5 pb-5 text-md border-t border-white/10 text-center text-gray-100"
         >
           <p>&copy; {currentYear} Quantum Wellness. All rights reserved.</p>
         </motion.div>

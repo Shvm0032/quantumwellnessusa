@@ -19,7 +19,8 @@ export default function OurClasses() {
     <section className="w-full py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-3xl font-serif text-center mb-8">Our Classes</h2>
+        <h2 className="text-3xl font-serif text-center mb-3">Our Classes</h2>
+        <div className="w-20 h-1 bg-[#8B4513] mx-auto mb-8"></div>
 
         {/* Controls */}
         <div className="flex flex-wrap justify-between items-center mb-1 md:mb-5 gap-4">

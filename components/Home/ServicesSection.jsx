@@ -50,7 +50,7 @@ export default function ServicesSection() {
           {services.slice(0, 3).map((service, i) => (
             <div
               key={i}
-              className="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center w-full sm:w-[350px]"
+              className="p-6 bg-gray-50 rounded-xl border-b-4 border-b-[#8B4513] shadow-md hover:shadow-lg transition-all duration-300 text-center w-full sm:w-[350px]"
             >
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 rounded-full bg-[#8B4513]/10 flex items-center justify-center shadow-sm overflow-hidden">
@@ -74,7 +74,7 @@ export default function ServicesSection() {
           {services.slice(3).map((service, i) => (
             <div
               key={i}
-              className="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center w-full sm:w-[350px]"
+              className="p-6 bg-gray-50 rounded-xl border-b-4 border-b-[#8B4513] shadow-md hover:shadow-lg transition-all duration-300 text-center w-full sm:w-[350px]"
             >
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 rounded-full bg-[#8B4513]/10 flex items-center justify-center shadow-sm overflow-hidden">
