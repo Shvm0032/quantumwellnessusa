@@ -11,7 +11,7 @@ export default function ReviewHero() {
 
       {/* Text Content */}
       <div className="relative z-10 text-center px-4">
-        <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight">
+        <h1 className="text-white text-3xl md:text-4xl font-semibold leading-tight">
           Quantum Wellness Testimonials, Hear What Our Clients Are Saying 
         </h1>
       </div>
