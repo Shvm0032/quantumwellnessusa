@@ -45,7 +45,7 @@ export default function Header() {
               ABOUT US <ChevronDown size={16} />
             </button>
             <div className="absolute text-sm hidden group-hover:block bg-black p-3 rounded-md w-60">
-              <Link href="#" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
+              <Link href="/our-story" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
                 Our Story
               </Link>
               <Link href="#" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
@@ -121,7 +121,7 @@ export default function Header() {
             ABOUT US <ChevronDown />
           </button>
           <div className={`${dropdown1 ? "block" : "hidden"} ml-4 mt-2 space-y-1`}>
-            <Link href="#" className="block">Our Story</Link>
+            <Link href="/our-story" className="block">Our Story</Link>
             <Link href="#" className="block">Our Team</Link>
             <Link href="#" className="block">Quantum Wellness Blog</Link>
           </div>
