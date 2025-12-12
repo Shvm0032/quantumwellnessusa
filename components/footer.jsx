@@ -94,27 +94,27 @@ export default function Footer() {
             <h4 className="font-serif font-bold">Service Booking</h4>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <a href="#services" className="hover:text-[#70512E] transition">
+                <a href="#" className="hover:text-[#70512E] transition">
                   Appointments
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#70512E] transition">
+                <a href="#" className="hover:text-[#70512E] transition">
                   Classes
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#70512E] transition">
+                <a href="#" className="hover:text-[#70512E] transition">
                   Events
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#70512E] transition">
+                <a href="#" className="hover:text-[#70512E] transition">
                   Schedule
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#70512E] transition">
+                <a href="/devices" className="hover:text-[#70512E] transition">
                   Devices/Services
                 </a>
               </li>
@@ -126,30 +126,30 @@ export default function Footer() {
             <h4 className="font-serif font-bold">Useful Links</h4>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <a href="#about" className="hover:text-[#70512E] transition">
+                <a href="/contact" className="hover:text-[#70512E] transition">
                   Contact
                 </a>
               </li>
               <li>
                 <a
-                  href="#testimonials"
+                  href="#"
                   className="hover:text-[#70512E] transition"
                 >
                   Store
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#70512E] transition">
+                <a href="/faq" className="hover:text-[#70512E] transition">
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#70512E] transition">
+                <a href="#" className="hover:text-[#70512E] transition">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#70512E] transition">
+                <a href="#" className="hover:text-[#70512E] transition">
                   Terms of Use
                 </a>
               </li>
