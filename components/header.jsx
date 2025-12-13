@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart, Menu, X, ChevronDown } from "lucide-react";
+import { goalsData } from "../app/data/goalsData";
+
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,9 +47,22 @@ export default function Header() {
               ABOUT US <ChevronDown size={16} />
             </button>
             <div className="absolute text-sm hidden group-hover:block bg-black p-3 rounded-md w-60">
-              <Link href="/our-story" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
+              <Link
+                href="/our-story"
+                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
+              >
                 Our Story
               </Link>
+              <Link
+                href="#"
+                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
+              >
+                Our Team
+              </Link>
+              <Link
+                href="#"
+                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
+              >
               <Link href="/our-team" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
                 Our Team
               </Link>
@@ -57,31 +72,61 @@ export default function Header() {
             </div>
           </div>
           <div className="relative group">
-            <button className="flex text-sm items-center gap-1">
+            <Link
+              href="/goals"
+              className="flex text-sm items-center gap-1 hover:text-[#6F512D]"
+            >
               GOALS <ChevronDown size={16} />
-            </button>
+            </Link>
+
             <div className="absolute text-sm hidden group-hover:block bg-black p-3 rounded-md w-90">
-              <Link href="#" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
+              <Link
+                href="/goals/body-composition-aesthetic-enhancement"
+                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
+              >
                 Body Composition & Aesthetic Enhancement
               </Link>
-              <Link href="#" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
+
+              <Link
+                href="/goals/performance-strength-optimization"
+                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
+              >
                 Performance & Strength Optimization
               </Link>
-              <Link href="#" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
+
+              <Link
+                href="/goals/pain-management-recovery"
+                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
+              >
                 Pain Management & Recovery
               </Link>
-              <Link href="#" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
+
+              <Link
+                href="/goals/holistic-wellness-stress-reduction"
+                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
+              >
                 Holistic Wellness & Stress Reduction
               </Link>
-              <Link href="#" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
+
+              <Link
+                href="/goals/longevity-biohacking-anti-aging"
+                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
+              >
                 Longevity & Biohacking for Anti-Aging
               </Link>
-              <Link href="#" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
-                Sexual Health, Harmonal Balance & Personalised Optimization
+
+              <Link
+                href="/goals/sexual-health-hormonal-balance-optimization"
+                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
+              >
+                Sexual Health, Hormonal Balance & Personalised Optimization
               </Link>
             </div>
           </div>
-          <Link href="/reviews" className="text-sm">REVIEWS</Link>
+
+          <Link href="/reviews" className="text-sm">
+            REVIEWS
+          </Link>
         </div>
 
         {/* LOGO (Always Center) */}
@@ -99,7 +144,9 @@ export default function Header() {
 
         {/* RIGHT SIDE (Cart + Login) */}
         <div className="flex gap-5 items-center text-white z-20">
-          <Link href="/devices" className="text-sm hidden sm:block">DEVICES/SERVICES</Link>
+          <Link href="/devices" className="text-sm hidden sm:block">
+            DEVICES/SERVICES
+          </Link>
           <ShoppingCart className="cursor-pointer" size={22} />
           <button className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-black transition">
             Login
@@ -108,9 +155,17 @@ export default function Header() {
       </div>
 
       {/* MOBILE MENU (Always in DOM, toggled via class) */}
-      <div className={`${mobileOpen ? "block" : "hidden"} md:hidden bg-black text-white px-6 py-4 space-y-3`}>
-        <Link href="#" className="block text-lg">FAQ</Link>
-        <Link href="#" className="block text-lg">Contact</Link>
+      <div
+        className={`${
+          mobileOpen ? "block" : "hidden"
+        } md:hidden bg-black text-white px-6 py-4 space-y-3`}
+      >
+        <Link href="#" className="block text-lg">
+          FAQ
+        </Link>
+        <Link href="#" className="block text-lg">
+          Contact
+        </Link>
 
         {/* DROPDOWN 1 */}
         <div>
@@ -120,6 +175,18 @@ export default function Header() {
           >
             ABOUT US <ChevronDown />
           </button>
+          <div
+            className={`${dropdown1 ? "block" : "hidden"} ml-4 mt-2 space-y-1`}
+          >
+            <Link href="/our-story" className="block">
+              Our Story
+            </Link>
+            <Link href="#" className="block">
+              Our Team
+            </Link>
+            <Link href="#" className="block">
+              Quantum Wellness Blog
+            </Link>
           <div className={`${dropdown1 ? "block" : "hidden"} ml-4 mt-2 space-y-1`}>
             <Link href="/our-story" className="block">Our Story</Link>
             <Link href="/our-team" className="block">Our Team</Link>
@@ -135,18 +202,36 @@ export default function Header() {
           >
             GOALS <ChevronDown />
           </button>
-          <div className={`${dropdown2 ? "block" : "hidden"} ml-4 mt-2 space-y-1`}>
-            <Link href="#" className="block">Body Composition</Link>
-            <Link href="#" className="block">Performance</Link>
-            <Link href="#" className="block">Pain Management</Link>
-            <Link href="#" className="block">Holistic Wellness</Link>
-            <Link href="#" className="block">Longevity</Link>
-            <Link href="#" className="block">Sexual Health</Link>
+          <div
+            className={`${dropdown2 ? "block" : "hidden"} ml-4 mt-2 space-y-1`}
+          >
+            <Link href="#" className="block">
+              Body Composition
+            </Link>
+            <Link href="#" className="block">
+              Performance
+            </Link>
+            <Link href="#" className="block">
+              Pain Management
+            </Link>
+            <Link href="#" className="block">
+              Holistic Wellness
+            </Link>
+            <Link href="#" className="block">
+              Longevity
+            </Link>
+            <Link href="#" className="block">
+              Sexual Health
+            </Link>
           </div>
         </div>
 
-        <Link href="/reviews" className="block text-lg">REVIEWS</Link>
-        <Link href="/devices" className="block text-lg">DEVICES/SERVICES</Link>
+        <Link href="/reviews" className="block text-lg">
+          REVIEWS
+        </Link>
+        <Link href="/devices" className="block text-lg">
+          DEVICES/SERVICES
+        </Link>
       </div>
     </header>
   );

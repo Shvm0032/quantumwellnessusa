@@ -16,20 +16,36 @@ export default function ReviewCards() {
       date: "Oct 17, 2025",
     },
     {
-      name: "Sarah Patel",
-      img: "/user2.jpg",
-      rating: 4,
-      review: "Good experience overall.",
+      name: "Robin Bednarcik",
+      img: "/testimonials/robin.webp",
+      rating: 5,
+      review: "Ryan is a wonderful wellness coach. She really cares about giving her clients the best options to help them achieve their wellness goals.",
       verified: true,
-      date: "2024-11-02",
+      date: "Jul 18, 2025",
     },
     {
-      name: "Michael Smith",
-      img: "/user3.jpg",
-      rating: 3,
-      review: "Average service, could be improved.",
+      name: "Megan Blanchard",
+      img: "/testimonials/megan.webp",
+      rating: 5,
+      review: "Absolutely LOVE Ryan! She is so friendly and knows her stuff. I was very comfortable with our plan. I am so excited to get my future started!! Beautiful office and great equipment. Thank you RYAN!!!",
       verified: true,
-      date: "2024-10-15",
+      date: "Jun 19, 2025",
+    },
+    {
+      name: "Robin Ford",
+      img: "/testimonials/ford.webp",
+      rating: 5,
+      review: "Wonderful personal wellness care.",
+      verified: true,
+      date: "Apr 07, 2025",
+    },
+    {
+      name: "Cheryl Treesh",
+      img: "/testimonials/chiryl.webp",
+      rating: 5,
+      review: "Ryan is amazing and very knowledgeable about health and fitness. I am still learning about all the machines and equipment at Quantum Wellness. I highly recommend this place.",
+      verified: true,
+      date: "Mar 13, 2025",
     },
   ];
 
@@ -101,7 +117,7 @@ export default function ReviewCards() {
                       {t.name}
                     </h3>
 
-                    <p className="text-sm text-[#8B4513] font-medium">
+                    <p className="text-sm text-[#8B4513]">
                       {t.verified ? "Verified Client" : ""}
                     </p>
                   </div>

@@ -17,6 +17,10 @@ body, p, span, li, a {
   font-family: var(--font-body);
 }
 
+.custom-select option:hover {
+  background-color: #70512E !important;
+  color: white !important;
+}
 
 :root {
   --background: #faf8f6;
