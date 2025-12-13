@@ -156,9 +156,9 @@ export default function Header() {
             DEVICES/SERVICES
           </Link>
           <ShoppingCart className="cursor-pointer" size={22} />
-          <button className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-black transition">
+          <Link href={"/sign-in"} className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-black transition">
             Login
-          </button>
+          </Link>
         </div>
       </div>
 
