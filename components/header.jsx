@@ -6,12 +6,12 @@ import Image from "next/image";
 import { ShoppingCart, Menu, X, ChevronDown } from "lucide-react";
 import { goalsData } from "../app/data/goalsData";
 
-
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,8 +21,10 @@ export default function Header() {
     // initial check (in case user reloads mid-scroll)
     handleScroll();
 
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <header
@@ -40,6 +42,7 @@ export default function Header() {
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
+
         {/* LEFT MENU (Desktop Only) */}
         <div className="hidden text-sm md:flex gap-6 text-white">
           <div className="relative group">
@@ -54,19 +57,15 @@ export default function Header() {
                 Our Story
               </Link>
               <Link
-                href="#"
+                href="/our-team"
                 className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
               >
                 Our Team
               </Link>
               <Link
-                href="#"
+                href="/blog"
                 className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              />
-              <Link href="/our-team" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
-                Our Team
-              </Link>
-              <Link href="/blog" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
+              >
                 Quantum Wellness Blog
               </Link>
             </div>
@@ -79,6 +78,7 @@ export default function Header() {
               GOALS <ChevronDown size={16} />
             </Link>
 
+
             <div className="absolute text-sm hidden group-hover:block bg-black p-3 rounded-md w-90">
               <Link
                 href="/goals/body-composition-aesthetic-enhancement"
@@ -87,12 +87,14 @@ export default function Header() {
                 Body Composition & Aesthetic Enhancement
               </Link>
 
+
               <Link
                 href="/goals/performance-strength-optimization"
                 className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
               >
                 Performance & Strength Optimization
               </Link>
+
 
               <Link
                 href="/goals/pain-management-recovery"
@@ -101,6 +103,7 @@ export default function Header() {
                 Pain Management & Recovery
               </Link>
 
+
               <Link
                 href="/goals/holistic-wellness-stress-reduction"
                 className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
@@ -108,15 +111,17 @@ export default function Header() {
                 Holistic Wellness & Stress Reduction
               </Link>
 
+
               <Link
-                href="/goals/longevity-biohacking-anti-aging"
+                href="/goals/longevity-biohacking-for-anti-aging"
                 className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
               >
                 Longevity & Biohacking for Anti-Aging
               </Link>
 
+
               <Link
-                href="/goals/sexual-health-hormonal-balance-optimization"
+                href="/goals/sexual-health-hormonal-balance-personalized-optimization"
                 className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
               >
                 Sexual Health, Hormonal Balance & Personalised Optimization
@@ -124,10 +129,12 @@ export default function Header() {
             </div>
           </div>
 
+
           <Link href="/reviews" className="text-sm">
             REVIEWS
           </Link>
         </div>
+
 
         {/* LOGO (Always Center) */}
         <div className="flex justify-center w-full md:w-auto absolute md:static left-0 right-0 mx-auto pointer-events-none md:pointer-events-auto pt-[env(safe-area-inset-top)]">
@@ -142,6 +149,7 @@ export default function Header() {
           </Link>
         </div>
 
+
         {/* RIGHT SIDE (Cart + Login) */}
         <div className="flex gap-5 items-center text-white z-20">
           <Link href="/devices" className="text-sm hidden sm:block">
@@ -153,6 +161,7 @@ export default function Header() {
           </button>
         </div>
       </div>
+
 
       {/* MOBILE MENU (Always in DOM, toggled via class) */}
       <div
@@ -166,7 +175,7 @@ export default function Header() {
         <Link href="#" className="block text-lg">
           Contact
         </Link>
-        </div>
+
 
         {/* DROPDOWN 1 */}
         <div>
@@ -182,18 +191,15 @@ export default function Header() {
             <Link href="/our-story" className="block">
               Our Story
             </Link>
-            <Link href="#" className="block">
+            <Link href="/our-team" className="block">
               Our Team
             </Link>
-            <Link href="#" className="block">
+            <Link href="/blog" className="block">
               Quantum Wellness Blog
             </Link>
-          <div className={`${dropdown1 ? "block" : "hidden"} ml-4 mt-2 space-y-1`}>
-            <Link href="/our-story" className="block">Our Story</Link>
-            <Link href="/our-team" className="block">Our Team</Link>
-            <Link href="/blog" className="block">Quantum Wellness Blog</Link>
           </div>
         </div>
+
 
         {/* DROPDOWN 2 */}
         <div>
@@ -206,26 +212,27 @@ export default function Header() {
           <div
             className={`${dropdown2 ? "block" : "hidden"} ml-4 mt-2 space-y-1`}
           >
-            <Link href="#" className="block">
+            <Link href="/goals/body-composition-aesthetic-enhancement" className="block">
               Body Composition
             </Link>
-            <Link href="#" className="block">
+            <Link href="/goals/performance-strength-optimization" className="block">
               Performance
             </Link>
-            <Link href="#" className="block">
+            <Link href="/goals/pain-management-recovery" className="block">
               Pain Management
             </Link>
-            <Link href="#" className="block">
+            <Link href="/goals/holistic-wellness-stress-reduction" className="block">
               Holistic Wellness
             </Link>
-            <Link href="#" className="block">
+            <Link href="/goals/longevity-biohacking-for-anti-aging" className="block">
               Longevity
             </Link>
-            <Link href="#" className="block">
+            <Link href="/goals/sexual-health-hormonal-balance-personalized-optimization" className="block">
               Sexual Health
             </Link>
           </div>
         </div>
+
 
         <Link href="/reviews" className="block text-lg">
           REVIEWS
