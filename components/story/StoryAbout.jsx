@@ -6,12 +6,12 @@ export default function StoryAbout() {
   return (
     <section className="w-full mt-20 px-4 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* LEFT CONTENT - No heading */}
+        {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           className="space-y-6"
         >
           <p className="text-gray-700 text-lg leading-relaxed">
@@ -31,33 +31,43 @@ export default function StoryAbout() {
           </p>
         </motion.div>
 
-        {/* RIGHT SIDE - 2 IMAGES with better overlapping design */}
+        {/* RIGHT SIDE - Stylish Overlapping Images */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative w-full h-[480px] md:h-[520px]"
+          transition={{ duration: 0.8 }}
+          className="relative h-[500px] md:h-[560px] lg:h-[600px]"
         >
-          {/* Image 1 - Bottom-left (back layer) */}
-          <div className="absolute bottom-0 left-0 w-72 h-96 rounded-3xl overflow-hidden shadow-2xl">
+          {/* Back Image - Bottom Left */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="absolute bottom-30 left-0 w-full h-80 md:w-96 md:h-[300px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white z-10 "
+          >
             <Image
-              src="https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="/story/story1.jpg"
               alt="Silhouette yoga at sunrise"
               fill
               className="object-cover object-center"
             />
-          </div>
+          </motion.div>
 
-          {/* Image 2 - Top-right (front layer, overlapping with rotate and higher z-index) */}
-          <div className="absolute top-0 right-0 w-72 h-96 rounded-3xl overflow-hidden shadow-2xl z-20 rotate-6">
+          {/* Front Image - Top Right (overlapping with style) */}
+          <motion.div
+            initial={{ opacity: 0, y: -30, rotate: 12 }}
+            whileInView={{ opacity: 1, y: 0, rotate: 8 }}
+            transition={{ duration: 0.9, delay: 0.4 }}
+            className="absolute top-14 right-0 w-80 h-96 md:w-96 md:h-[300px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white z-5 -rotate-3 hover:rotate-0 transition-transform duration-500 hidden md:block"
+          >
             <Image
-              src="https://images.pexels.com/photos/3820303/pexels-photo-3820303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="/story/story2.jpg"
               alt="Woman in serene meditation pose in nature"
               fill
               className="object-cover object-center"
             />
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
