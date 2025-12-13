@@ -62,7 +62,7 @@ export default function Header() {
               <Link
                 href="#"
                 className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
+              />
               <Link href="/our-team" className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300">
                 Our Team
               </Link>
@@ -166,6 +166,7 @@ export default function Header() {
         <Link href="#" className="block text-lg">
           Contact
         </Link>
+        </div>
 
         {/* DROPDOWN 1 */}
         <div>
