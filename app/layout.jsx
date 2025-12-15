@@ -3,6 +3,7 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Outfit, Cinzel } from "next/font/google"
+import ChatBox from "../components/ChatBox"
 
 const headingFont = Cinzel({ subsets: ["latin"], variable: "--font-heading" })
 const bodyFont = Outfit({ subsets: ["latin"], variable: "--font-body" })
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
 
         <Header />
         <main className="min-h-screen">{children}</main>
+        <ChatBox/>
         <Footer />
       </body>
     </html>
