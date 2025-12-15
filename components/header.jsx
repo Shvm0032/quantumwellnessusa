@@ -155,7 +155,9 @@ export default function Header() {
           <Link href="/devices" className="text-sm hidden sm:block">
             DEVICES/SERVICES
           </Link>
+          <Link href="/cart">
           <ShoppingCart className="cursor-pointer" size={22} />
+          </Link>
           <Link href={"/sign-in"} className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-black transition">
             Login
           </Link>
