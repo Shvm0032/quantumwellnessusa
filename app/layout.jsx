@@ -15,7 +15,7 @@ export const metadata = {
     "Transform your health with our premium wellness programs, personal training, and holistic approaches to fitness.",
   generator: "v0.app",
   icons: {
-    icon: "/icon.svg",
+    icon: "/logo-site-icon.png",
   },
 }
 
