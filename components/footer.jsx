@@ -132,7 +132,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/store"
                   className="hover:text-[#70512E] transition"
                 >
                   Store
