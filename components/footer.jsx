@@ -94,22 +94,22 @@ export default function Footer() {
             <h4 className="font-serif font-bold">Service Booking</h4>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <a href="#" className="hover:text-[#70512E] transition">
+                <a href="/appointments" className="hover:text-[#70512E] transition">
                   Appointments
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#70512E] transition">
+                <a href="/classes" className="hover:text-[#70512E] transition">
                   Classes
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#70512E] transition">
+                <a href="/events" className="hover:text-[#70512E] transition">
                   Events
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#70512E] transition">
+                <a href="/schedule" className="hover:text-[#70512E] transition">
                   Schedule
                 </a>
               </li>
