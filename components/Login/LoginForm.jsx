@@ -7,23 +7,12 @@ export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-   <section className="min-h-screen flex items-center justify-center px-4  bg-cover bg-center" style={{backgroundImage :"url('/auth/auth-bg.jpeg')"}}>
-
-     <div
-  className="
-    relative z-10
-    w-full max-w-md
-    rounded-2xl
-    p-8
-    bg-white/70
-    backdrop-blur-xl
-    border border-white/30
-    shadow-2xl
-  "
->
-        <h2 className="text-2xl font-semibold text-center mb-6">
-          Sign In
-        </h2>
+    <section
+      className="min-h-screen flex items-center justify-center px-4  bg-cover bg-center"
+      style={{ backgroundImage: "url('/auth/auth-bg.jpeg')" }}
+    >
+      <div className=" relative z-10 md:mt-16 w-full max-w-md rounded-2xl p-8 bg-white/70 backdrop-blur-xl border border-white/30 shadow-2xl ">
+        <h2 className="text-2xl font-semibold text-center mb-6">Sign In</h2>
 
         <form className="space-y-5">
           {/* Email */}
@@ -40,9 +29,7 @@ export default function LoginForm() {
 
           {/* Password */}
           <div>
-            <label className="block text-sm font-medium mb-1">
-              Password
-            </label>
+            <label className="block text-sm font-medium mb-1">Password</label>
             <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
