@@ -49,7 +49,7 @@ export default function Footer() {
           variants={footerVariants}
           initial="hidden"
           animate="visible"
-          className="grid md:grid-cols-4 gap-12 mb-12"
+          className="grid md:grid-cols-3 gap-12 mb-12"
         >
           {/* 1️⃣ LOGO + SOCIALS */}
           <motion.div
@@ -90,7 +90,7 @@ export default function Footer() {
           </motion.div>
 
           {/* 2️⃣ SERVICES */}
-          <motion.div variants={itemVariants} className="space-y-4">
+          {/* <motion.div variants={itemVariants} className="space-y-4">
             <h4 className="font-serif font-bold">Service Booking</h4>
             <ul className="space-y-2 text-gray-600">
               <li>
@@ -119,7 +119,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </motion.div>
+          </motion.div> */}
 
           {/* 3️⃣ USEFUL LINKS */}
           <motion.div variants={itemVariants} className="space-y-4">
