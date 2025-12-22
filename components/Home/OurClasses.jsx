@@ -5,15 +5,16 @@ import { useState } from "react";
 export default function OurClasses() {
   const [date, setDate] = useState("2025-12-08");
   const [view, setView] = useState("day");
+  const [classes,setClasses] = useState([]);
 
-  // Dummy class data
-  const classes = [
-    { time: "08:00 AM", title: "Yoga Basics", instructor: "Alice" },
-    { time: "10:00 AM", title: "Pilates", instructor: "Bob" },
-    { time: "12:00 PM", title: "HIIT Training", instructor: "Charlie" },
-    { time: "02:00 PM", title: "Zumba", instructor: "Diana" },
-    { time: "04:00 PM", title: "Meditation", instructor: "Eve" },
-  ];
+  // // Dummy class data
+  // const classes = [
+  //   { time: "08:00 AM", title: "Yoga Basics", instructor: "Alice" },
+  //   { time: "10:00 AM", title: "Pilates", instructor: "Bob" },
+  //   { time: "12:00 PM", title: "HIIT Training", instructor: "Charlie" },
+  //   { time: "02:00 PM", title: "Zumba", instructor: "Diana" },
+  //   { time: "04:00 PM", title: "Meditation", instructor: "Eve" },
+  // ];
 
   return (
     <section className="w-full py-16 bg-gray-50">
@@ -27,7 +28,7 @@ export default function OurClasses() {
           {/* Date Picker */}
           <div className="flex items-center gap-2">
             <button
-              className="px-4 py-2 bg-brown-700 text-white font-semibold rounded"
+              className="px-4 py-2 bg-brown-700  font-semibold rounded"
               onClick={() => setDate(new Date().toISOString().split("T")[0])}
             >
               Today
@@ -69,7 +70,7 @@ export default function OurClasses() {
         </div>
 
         {/* Schedule */}
-        <div className="bg-brown-700 text-white font-semibold px-4 py-2 rounded-t">
+        <div className="bg-brown-700  font-semibold px-4 py-2 rounded-t">
           {new Date(date).toLocaleDateString("en-US", {
             weekday: "short",
             month: "short",
@@ -94,7 +95,7 @@ export default function OurClasses() {
         </div>
 
         {/* Download PDF */}
-        <div className="flex items-center gap-2 mt-6 text-brown-700 font-semibold cursor-pointer">
+        <a href="/home/classes.pdf" target="_blank" className="flex items-center gap-2 mt-6 text-brown-700 font-semibold cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -105,7 +106,7 @@ export default function OurClasses() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
           <span>Download a pdf version of our schedule</span>
-        </div>
+        </a>
       </div>
     </section>
   );

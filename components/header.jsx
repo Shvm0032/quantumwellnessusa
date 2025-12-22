@@ -4,31 +4,26 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart, Menu, X, ChevronDown } from "lucide-react";
-import { goalsData } from "../app/data/goalsData";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dropdown1, setDropdown1] = useState(false);
-  const [dropdown2, setDropdown2] = useState(false);
-
+  const [dropdown1, setDropdown1] = useState(false); // ABOUT
+  const [dropdown2, setDropdown2] = useState(false); // GOALS
+  const [dropdown3, setDropdown3] = useState(false); // PERSONAL TRAINING
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    // initial check (in case user reloads mid-scroll)
     handleScroll();
-
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all md:px-16 duration-300 pt-[env(safe-area-inset-top)] ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 md:px-16 pt-[env(safe-area-inset-top)] ${
         isScrolled ? "bg-black shadow-lg" : "bg-transparent"
       }`}
     >
@@ -42,206 +37,121 @@ export default function Header() {
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-
-        {/* LEFT MENU (Desktop Only) */}
-        <div className="hidden text-sm md:flex gap-6 text-white">
+        {/* LEFT MENU (DESKTOP) */}
+        <div className="hidden md:flex gap-6 text-sm text-white">
+          {/* ABOUT */}
           <div className="relative group">
-            <button className="flex text-sm items-center gap-1">
+            <button className="flex items-center gap-1">
               ABOUT US <ChevronDown size={16} />
             </button>
-            <div className="absolute text-sm hidden group-hover:block bg-black p-3 rounded-md w-60">
-              <Link
-                href="/our-story"
-                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
-                Our Story
-              </Link>
-              <Link
-                href="/our-team"
-                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
-                Our Team
-              </Link>
-              <Link
-                href="/blog"
-                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
-                Quantum Wellness Blog
-              </Link>
+            <div className="absolute hidden group-hover:block bg-black p-3 rounded-md w-60">
+              <Link href="/our-story" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">Our Story</Link>
+              <Link href="/our-team" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">Our Team</Link>
+              <Link href="/blog" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">Quantum Wellness Blog</Link>
             </div>
           </div>
+
+          {/* GOALS */}
           <div className="relative group">
-            <Link
-              href="/goals"
-              className="flex text-sm items-center gap-1 hover:text-[#6F512D]"
-            >
+            <button className="flex items-center gap-1 ">
               GOALS <ChevronDown size={16} />
-            </Link>
+            </button>
+            <div className="absolute hidden group-hover:block bg-black p-3 rounded-md w-96">
+              <Link href="/goals/body-composition-aesthetic-enhancement" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">Body Composition & Aesthetic Enhancement</Link>
+              <Link href="/goals/performance-strength-optimization" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">Performance & Strength Optimization</Link>
+              <Link href="/goals/pain-management-recovery" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">Pain Management & Recovery</Link>
+              <Link href="/goals/holistic-wellness-stress-reduction" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">Holistic Wellness & Stress Reduction</Link>
+              <Link href="/goals/longevity-biohacking-for-anti-aging" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">Longevity & Biohacking</Link>
+              <Link href="/goals/sexual-health-hormonal-balance-personalized-optimization" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">Sexual Health & Hormonal Balance</Link>
+            </div>
+          </div>
 
-
-            <div className="absolute text-sm hidden group-hover:block bg-black p-3 rounded-md w-90">
-              <Link
-                href="/goals/body-composition-aesthetic-enhancement"
-                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
-                Body Composition & Aesthetic Enhancement
+          {/* PERSONAL TRAINING */}
+          <div className="relative group">
+            <button className="flex items-center gap-1">
+              PERSONAL TRAINING <ChevronDown size={16} />
+            </button>
+            <div className="absolute hidden group-hover:block bg-black p-3 rounded-md w-64">
+              <Link href="/personal-training/online" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">
+                Online Personal Training
               </Link>
-
-
-              <Link
-                href="/goals/performance-strength-optimization"
-                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
-                Performance & Strength Optimization
-              </Link>
-
-
-              <Link
-                href="/goals/pain-management-recovery"
-                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
-                Pain Management & Recovery
-              </Link>
-
-
-              <Link
-                href="/goals/holistic-wellness-stress-reduction"
-                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
-                Holistic Wellness & Stress Reduction
-              </Link>
-
-
-              <Link
-                href="/goals/longevity-biohacking-for-anti-aging"
-                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
-                Longevity & Biohacking for Anti-Aging
-              </Link>
-
-
-              <Link
-                href="/goals/sexual-health-hormonal-balance-personalized-optimization"
-                className="block py-1 hover:text-[#6F512D] px-2 font-semibold hover:bg-gray-300"
-              >
-                Sexual Health, Hormonal Balance & Personalised Optimization
+              <Link href="/personal-training/one-on-one" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">
+                One-on-One Personal Training
               </Link>
             </div>
           </div>
 
-
-          <Link href="/reviews" className="text-sm">
-            REVIEWS
-          </Link>
         </div>
 
-
-        {/* LOGO (Always Center) */}
-        <div className="flex justify-center w-full md:w-auto absolute md:static left-0 right-0 mx-auto pointer-events-none md:pointer-events-auto pt-[env(safe-area-inset-top)]">
+        {/* LOGO */}
+        <div className="absolute md:static left-0 right-0 mx-auto flex justify-center pointer-events-none md:pointer-events-auto">
           <Link href="/">
-            <Image
-              src="/quantum-logo.webp"
-              width={120}
-              height={50}
-              alt="Logo"
-              className="pointer-events-auto"
-            />
+            <Image src="/quantum-logo.webp" width={120} height={50} alt="Logo" />
           </Link>
         </div>
 
-
-        {/* RIGHT SIDE (Cart + Login) */}
-        <div className="flex gap-5 items-center text-white z-20">
-          <Link href="/devices" className="text-sm hidden sm:block">
-            DEVICES/SERVICES
-          </Link>
-          <Link href="/cart">
-          <ShoppingCart className="cursor-pointer" size={22} />
-          </Link>
-          <Link href={"/sign-in"} className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-black transition">
+        {/* RIGHT MENU */}
+        <div className="flex items-center gap-5 text-white z-20">
+          <Link href="/reviews" className="hidden sm:block text-sm">REVIEWS</Link>
+          <Link href="/devices" className="hidden sm:block text-sm">DEVICES/SERVICES</Link>
+          <Link href="/cart"><ShoppingCart size={22} /></Link>
+          <Link href="/sign-in" className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-black transition">
             Login
           </Link>
         </div>
       </div>
 
+      {/* MOBILE MENU */}
+      <div className={`${mobileOpen ? "block" : "hidden"} md:hidden bg-black text-white px-6 py-4 space-y-3`}>
+        <Link href="/faq" className="block text-lg">FAQ</Link>
+        <Link href="/contact" className="block text-lg">Contact</Link>
 
-      {/* MOBILE MENU (Always in DOM, toggled via class) */}
-      <div
-        className={`${
-          mobileOpen ? "block" : "hidden"
-        } md:hidden bg-black text-white px-6 py-4 space-y-3`}
-      >
-        <Link href="#" className="block text-lg">
-          FAQ
-        </Link>
-        <Link href="#" className="block text-lg">
-          Contact
-        </Link>
-
-
-        {/* DROPDOWN 1 */}
+        {/* ABOUT */}
         <div>
-          <button
-            className="flex justify-between w-full text-lg"
-            onClick={() => setDropdown1(!dropdown1)}
-          >
+          <button onClick={() => setDropdown1(!dropdown1)} className="flex justify-between w-full text-lg">
             ABOUT US <ChevronDown />
           </button>
-          <div
-            className={`${dropdown1 ? "block" : "hidden"} ml-4 mt-2 space-y-1`}
-          >
-            <Link href="/our-story" className="block">
-              Our Story
-            </Link>
-            <Link href="/our-team" className="block">
-              Our Team
-            </Link>
-            <Link href="/blog" className="block">
-              Quantum Wellness Blog
-            </Link>
-          </div>
+          {dropdown1 && (
+            <div className="ml-4 mt-2 space-y-1">
+              <Link href="/our-story" className="block">Our Story</Link>
+              <Link href="/our-team" className="block">Our Team</Link>
+              <Link href="/blog" className="block">Blog</Link>
+            </div>
+          )}
         </div>
 
-
-        {/* DROPDOWN 2 */}
+        {/* GOALS */}
         <div>
-          <button
-            className="flex justify-between w-full text-lg"
-            onClick={() => setDropdown2(!dropdown2)}
-          >
+          <button onClick={() => setDropdown2(!dropdown2)} className="flex justify-between w-full text-lg">
             GOALS <ChevronDown />
           </button>
-          <div
-            className={`${dropdown2 ? "block" : "hidden"} ml-4 mt-2 space-y-1`}
-          >
-            <Link href="/goals/body-composition-aesthetic-enhancement" className="block">
-              Body Composition
-            </Link>
-            <Link href="/goals/performance-strength-optimization" className="block">
-              Performance
-            </Link>
-            <Link href="/goals/pain-management-recovery" className="block">
-              Pain Management
-            </Link>
-            <Link href="/goals/holistic-wellness-stress-reduction" className="block">
-              Holistic Wellness
-            </Link>
-            <Link href="/goals/longevity-biohacking-for-anti-aging" className="block">
-              Longevity
-            </Link>
-            <Link href="/goals/sexual-health-hormonal-balance-personalized-optimization" className="block">
-              Sexual Health
-            </Link>
-          </div>
+          {dropdown2 && (
+            <div className="ml-4 mt-2 space-y-1">
+              <Link href="/goals/body-composition-aesthetic-enhancement" className="block">Body Composition</Link>
+              <Link href="/goals/performance-strength-optimization" className="block">Performance</Link>
+              <Link href="/goals/pain-management-recovery" className="block">Pain Management</Link>
+              <Link href="/goals/holistic-wellness-stress-reduction" className="block">Holistic Wellness</Link>
+              <Link href="/goals/longevity-biohacking-for-anti-aging" className="block">Longevity</Link>
+              <Link href="/goals/sexual-health-hormonal-balance-personalized-optimization" className="block">Sexual Health</Link>
+            </div>
+          )}
         </div>
 
+        {/* PERSONAL TRAINING */}
+        <div>
+          <button onClick={() => setDropdown3(!dropdown3)} className="flex justify-between w-full text-lg">
+            PERSONAL TRAINING <ChevronDown />
+          </button>
+          {dropdown3 && (
+            <div className="ml-4 mt-2 space-y-1">
+              <Link href="/personal-training/online" className="block">Online Personal Training</Link>
+              <Link href="/personal-training/one-on-one" className="block">One-on-One Personal Training</Link>
+            </div>
+          )}
+        </div>
 
-        <Link href="/reviews" className="block text-lg">
-          REVIEWS
-        </Link>
-        <Link href="/devices" className="block text-lg">
-          DEVICES/SERVICES
-        </Link>
+        <Link href="/reviews" className="block text-lg">REVIEWS</Link>
+        <Link href="/devices" className="block text-lg">DEVICES/SERVICES</Link>
       </div>
     </header>
   );

@@ -25,7 +25,7 @@ export default function AboutSection() {
             Learn advanced treatments like neurofeedback and biofeedback, or rejuvenate at our quantum wellness spa. Boost recovery and vitality with red light therapy, PEMF therapy, or BallancerPro devices. Relax and detoxify with infrared sauna sessions or take advantage of our sports recovery treatments and VO2 max testing to optimize your athletic performance.
           </p>
           <p>
-            Our personalized fitness plans, guided by expert trainers and metabolic testing, are made to your needs. We also offer innovative solutions like peptide therapies and biohacking techniques to enhance energy and vitality. To support your overall wellness, we provide nutrition support, supplementation guidance and lymphatic massage. Transform your lifestyle with body contouring options and neuro-muscular reeducation programs, designed for sustainable, long-term health and fitness. 
+            Our personalized fitness plans, guided by expert trainers and metabolic testing, are made to your needs. We also offer innovative solutions like peptide consultations therapies and biohacking techniques to enhance energy and vitality. To support your overall wellness, we provide nutrition support, supplementation guidance and lymphatic massage. Transform your lifestyle with body contouring options and neuro-muscular reeducation programs, designed for sustainable, long-term health and fitness. 
           </p>
         </div>
 
