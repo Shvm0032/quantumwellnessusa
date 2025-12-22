@@ -17,7 +17,7 @@ export default function ServicesSection() {
     {
       imgSrc: "/icons/therapes.png",
       title: "Innovative Therapies",
-      desc: "Experience state-of-the-art treatments, including regenerative medicine, IV therapy, cryotherapy, and more, designed to rejuvenate your body and mind.",
+      desc: "Experience state-of-the-art treatments, including Lympatic Massage, PEMF Redlight therapy , energy based healing Metabolic and VO2 nax testing  designed to rejuvenate your body and mind.",
     },
     {
       imgSrc: "/icons/fitness.png",
@@ -27,7 +27,7 @@ export default function ServicesSection() {
     {
       imgSrc: "/icons/mind.png",
       title: "Fitness & Mindfulness & Relaxation",
-      desc: "Discover tranquility through our meditation, yoga, and mindfulness sessions, promoting mental clarity and emotional balance.",
+      desc: "Discover tranquility through our meditation, and mindfulness sessions, promoting mental clarity and emotional balance.",
     },
   ];
 
