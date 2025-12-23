@@ -2,8 +2,42 @@ import React from 'react'
 import DeviceHero from '../../../components/DevicesSinglePages/DeviceHero'
 import DeviceSection from '../../../components/DevicesSinglePages/DeviceSection'
 import DevicePointsSection from '../../../components/DevicesSinglePages/DevicePointsSection'
+import DeviceFrequencyPrograms from '../../../components/DevicesSinglePages/DeviceFrequencyPrograms'
+
 
 const page = () => {
+
+const frequencyProgramsData = {
+  title: "FREQUENCY PROGRAMS",
+  sections: [
+    {
+      heading: "Aesthetic / Wellness Treatments",
+      content: [
+        { text: "Drop at least a dress size before a major event" },
+        { text: "12 treatments every day, 40 - 60 minutes each" },
+        { text: "For cellulite reduction", type: "title" },
+        { text: "3 - 7 treatments a week, 40 - 60 minutes each" },
+        { text: "For improved skin", type: "title" },
+        { text: "3 - 7 treatments a week, 40 - 60 minutes each" },
+        { text: "For detoxification", type: "title" },
+        { text: "3 - 7 treatments a week, 60 minutes each" },
+      ],
+    },
+    {
+      heading: "Athletic Recovery",
+      content: [
+        { text: "General Athletic Recovery", type: "title" },
+        {
+          text:
+            "40 minute treatments in the Ballancer Pro are equivalent to 2 days’ rest and recovery. Treatment recommendation is at least once per day and at minimum twice a day during high volume days",
+        },
+        { text: "Pre and Post Heavy-Training Recovery", type: "title" },
+        { text: "20 - 60 minute treatments" },
+      ],
+    },
+  ],
+};
+
   return (
     <>
     {/* herosection   */}
@@ -79,6 +113,30 @@ const page = () => {
   "The most ideal pressure is 20 mmHg below a client’s resting diastolic BP",
   ]}
   />
+
+ <DeviceFrequencyPrograms
+  title={frequencyProgramsData.title}
+  sections={frequencyProgramsData.sections}
+/>
+ <div className='mb-12'>
+  <DevicePointsSection
+  title="CONTRAINDICATIONS"
+  points={[
+       "Currently undergoing active chemotherapy",
+  "Uncontrolled congestive heart failure",
+  "Unstable cardiac disease",
+  "Known or suspected deep vein thrombosis (DVT)",
+  "Unexplained pain or numbness not evaluated by a physician",
+  "Ischemic vascular disease, including pain at rest or gangrene",
+  "Infected skin or the presence of an open infected wound",
+  ]}
+  />
+
+ </div>
+  
+
+
+
 
 
 
