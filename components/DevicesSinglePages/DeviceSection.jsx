@@ -8,7 +8,7 @@ export default function DeviceSection({
     <section className="py-6 bg-transparent">
       <div className="max-w-4xl mx-auto px-6">
         {title && (
-          <h2 className="text-2xl md:text-3xl font-serif mb-2 text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-semibold font-serif mb-2 text-gray-900">
             {title}
           </h2>
         )}
