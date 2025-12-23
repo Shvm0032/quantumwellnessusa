@@ -1,9 +1,4 @@
 "use client"
-import React from 'react'
-import DeviceHero from '../../../components/DevicesSinglePages/DeviceHero'
-import DeviceSection from '../../../components/DevicesSinglePages/DeviceSection'
-import DevicePointsSection from '../../../components/DevicesSinglePages/DevicePointsSection'
-import DeviceFrequencyPrograms from '../../../components/DevicesSinglePages/DeviceFrequencyPrograms'
 
 import React from "react";
 import DeviceHero from "../../../components/DevicesSinglePages/DeviceHero";
