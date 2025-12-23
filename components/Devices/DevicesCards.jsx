@@ -17,72 +17,72 @@ export default function DevicesCards() {
     {
       title: "bio charger",
       img: "/devices/devices-img/device-img-3.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/bio-charger",
     },
     {
       title: "cryowave",
       img: "/devices/devices-img/device-img-4.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/cryowave",
     },
     {
       title: "flexforce",
       img: "/devices/devices-img/device-img-5.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/flexforce",
     },
     {
       title: "infrared sauna",
       img: "/devices/devices-img/device-img-6.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/infraed-sauna",
     },
     {
       title: "Nanovi",
       img: "/devices/devices-img/device-img-7.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/nanovi",
     },
     {
       title: "red light therapy",
       img: "/devices/devices-img/device-img-8.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/red-light-therapy",
     },
     {
       title: "PEMF",
       img: "/devices/devices-img/device-img-9.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/pemf",
     },
     {
       title: "PNOE",
       img: "/devices/devices-img/device-img-10.png",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/pnoe",
     },
     {
       title: "salt booth",
       img: "/devices/devices-img/device-img-11.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/salt-booth",
     },
     {
       title: "shapescale",
       img: "/devices/devices-img/device-img-12.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/shapescale",
     },
     {
       title: "xtone",
       img: "/devices/devices-img/device-img-13.jpeg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/xtone",
     },
     {
       title: "Oxefit XP1",
       img: "/devices/devices-img/device-img-14.webp",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/oxefit-xp1",
     },
     {
       title: "Oxefit XS1",
       img: "/devices/devices-img/device-img-15.jpg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/oxefit-xs1",
     },
     {
       title: "Neubie/Neuit",
       img: "/devices/devices-img/device-img-16.jpg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/neuit",
     },
   ];
 
