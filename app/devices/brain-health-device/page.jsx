@@ -31,6 +31,57 @@ const page = () => {
   "Speeds recovery by removing metabolic waste and lactic acid",
   ]}
 />
+<DevicePointsSection
+  title="WHO COULD BENEFIT?"
+  points={[
+        "Anyone looking to reduce waist size quickly",
+  "Anyone looking to improve the appearance of cellulite",
+  "Anyone looking for total body well being and relaxation",
+  "Anyone looking for muscle recovery",
+  "Anyone looking to reduce inflammation",
+  "Anyone looking for a full body detoxification",
+  "Anyone suffering from lymphedema, lipedema, or edema",
+  "Anyone who has to spend a prolonged time on their feet",
+  "Anyone looking to receive aid in recovery",
+  "Anyone looking to support their immune system",
+  "Anyone who has or is about to experience liposuction treatments",
+  "Anyone looking to enhance the results of body contouring"
+  ]}
+/>
+
+<DeviceSection
+  title="HOW OFTEN?"
+  description={[
+    "One to fourteen treatments a week for a minimum of 30 to 60 minutes each treatment. Ideally, breakdown would be 40 minutes in pants and 20 minutes in the jacket for a full body treatment",
+  ]}
+  />
+  <DeviceSection
+  title="HOW DOES IT FEEL?"
+  description={[
+    `During a treatment users enjoy an extremely relaxing and comfortable experience that brings aesthetic and wellness results! Depending on the desired outcome, less is more in most cases, and should feel like a thousand butterflies fluttering over your body.`,
+    `After a treatment you should feel relaxed and lighter, and rejuvenated. Most clients will feel the need to urinate after treatment due to the flushing of the lymphatic system.`
+  ]}
+  />
+    <DeviceSection
+  title="MAXIMIZE RESULTS"
+  description={[
+    `The more frequently you use the Ballancer Pro, the better your results. Results will last typically for 6 - 9 weeks depending on our lymphatic system and lifestyle. It’s best to follow a maintenance program once goals are achieved.`
+  ]}
+  />
+
+  <DevicePointsSection
+  title="THINGS TO REMEMBER"
+  points={[
+      "Remember to use the reusable liners for most individuals",
+  "The pre-treatment will always be set at 40 mmHg",
+  "Less is more when stimulating the lymphatic system",
+  "Remind clients that they need to be well hydrated and ensure that they drink water before and after treatment",
+  "The most ideal pressure is 20 mmHg below a client’s resting diastolic BP",
+  ]}
+  />
+
+
+
     </>
   )
 }
