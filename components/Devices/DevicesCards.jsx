@@ -32,7 +32,7 @@ export default function DevicesCards() {
     {
       title: "infrared sauna",
       img: "/devices/devices-img/device-img-6.jpeg",
-      link: "/devices/infraed-sauna",
+      link: "/devices/infrared-sauna",
     },
     {
       title: "Nanovi",
