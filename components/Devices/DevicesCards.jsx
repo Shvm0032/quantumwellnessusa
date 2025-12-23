@@ -7,12 +7,12 @@ export default function DevicesCards() {
     {
       title: "ballancer-pro",
       img: "/devices/devices-img/device-img-1.jpeg",
-      link: "/devices/brain-health-device",
+      link: "/devices/ballancer-pro",
     },
     {
       title: "braintap",
       img: "/devices/devices-img/device-img-2.jpeg",
-      link: "/devices/wellness-tracker",
+      link: "/devices/braintap",
     },
     {
       title: "bio charger",

@@ -7,8 +7,6 @@ import ServicesCards from "@/components/Devices/ServicesCards";
 import ContactDevices from "../../components/Devices/ContactDevices";
 
 
-
-
 export default function Devices() {
   return (
     <>
