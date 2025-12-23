@@ -3,11 +3,12 @@
 export default function DeciceBoldSection({
   title,
   points = [],
+  className
 }) {
   if (!points.length) return null;
 
   return (
-    <section className="py-2 bg-transparent">
+    <section className={`py-6 bg-transparent ${className}`}>
       <div className="max-w-4xl mx-auto px-6">
 
         {/* Heading */}
