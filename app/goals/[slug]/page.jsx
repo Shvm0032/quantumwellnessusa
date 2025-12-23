@@ -1,18 +1,24 @@
-"use client";
-
-import { useParams } from "next/navigation"; 
 import { goalsData } from "../../data/goalsData";
-import { ArrowRight } from "lucide-react";
 import { FaAtom } from "react-icons/fa";
 
-export default function SingleGoalPage() {
-  const params = useParams(); 
-  const { slug } = params;
+/* REQUIRED for static export */
+export function generateStaticParams() {
+  return goalsData.map((goal) => ({
+    slug: goal.slug,
+  }));
+}
+
+export default async function  SingleGoalPage({ params }) {
+  const { slug } = await params;
 
   const goal = goalsData.find((item) => item.slug === slug);
 
   if (!goal) {
-    return <div className="p-10 text-center text-xl">Goal Not Found</div>;
+    return (
+      <div className="p-10 text-center text-xl">
+        Goal Not Found
+      </div>
+    );
   }
 
   return (
@@ -30,7 +36,9 @@ export default function SingleGoalPage() {
 
       {/* DESCRIPTION */}
       <div className="max-w-5xl mx-auto px-4 py-10">
-        <p className="text-gray-700 text-lg leading-relaxed">{goal.description}</p>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          {goal.description}
+        </p>
       </div>
 
       {/* GOAL DETAILS */}
@@ -39,21 +47,34 @@ export default function SingleGoalPage() {
           <div key={i} className="border-l-4 border-[#70512E] pl-4">
             <div className="flex items-center gap-2">
               <FaAtom className="text-[#70512E]" size={20} />
-              <h3 className="text-2xl font-semibold text-gray-900">{item.heading}</h3>
+              <h3 className="text-2xl font-semibold text-gray-900">
+                {item.heading}
+              </h3>
             </div>
-            <p className="text-gray-600 mt-2">{item.content}</p>
+            <p className="text-gray-600 mt-2">
+              {item.content}
+            </p>
           </div>
         ))}
       </div>
 
       {/* EXTRA SECTION */}
-      <div className="max-w-5xl mx-auto px-4 py-5 mt-5 ">
-        <h2 className="md:text-3xl font-semibold text-gray-800">{goal.extra1}</h2>
-        <p className="text-gray-700 mt-3">{goal.description1}</p>
+      <div className="max-w-5xl mx-auto px-4 py-5 mt-5">
+        <h2 className="md:text-3xl font-semibold text-gray-800">
+          {goal.extra1}
+        </h2>
+        <p className="text-gray-700 mt-3">
+          {goal.description1}
+        </p>
       </div>
+
       <div className="max-w-5xl mx-auto px-4 py-5 mb-10">
-        <h2 className="md:text-3xl font-semibold text-gray-800">{goal.extra2}</h2>
-        <p className="text-gray-700 mt-3">{goal.description2}</p>
+        <h2 className="md:text-3xl font-semibold text-gray-800">
+          {goal.extra2}
+        </h2>
+        <p className="text-gray-700 mt-3">
+          {goal.description2}
+        </p>
       </div>
     </section>
   );
