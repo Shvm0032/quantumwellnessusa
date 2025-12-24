@@ -79,7 +79,7 @@ But BrainTap works especially well for anyone  "/>
   "Persons with severe medical problems such as advanced heart or liver disease.",
   ]}/>
 
-      <DeviceSection title="HOW TO PURCHASE" classname='mb-6' description="With any of our foundational services"/>
+      <DeviceSection title="HOW TO PURCHASE" className='mb-12' description="With any of our foundational services"/>
 
       
 

@@ -116,7 +116,7 @@ const page = () => {
         description={[
           "Through any of our foundational memberships  ",
         ]}
-        classname="mb-12"
+        className="mb-12"
       />
 
     </>
