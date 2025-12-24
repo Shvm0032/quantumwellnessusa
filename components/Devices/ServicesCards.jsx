@@ -7,22 +7,22 @@ export default function ServicesCards() {
     {
       title: "Biofeedback",
       img: "/devices/services-img/services-img-1.jpg",
-      link: "/devices/brain-health-device",
+      link: "/devices/biofeedback",
     },
     {
       title: "Neurofeedback",
       img: "/devices/services-img/services-img-2.jpg",
-      link: "/devices/wellness-tracker",
+      link: "/devices/neurofeedback",
     },
     {
       title: "Neurostimulation",
       img: "/devices/services-img/services-img-3.jpg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/neurostimulation",
     },
     {
       title: "Brain Mapping",
       img: "/devices/services-img/services-img-4.jpg",
-      link: "/devices/body-relaxation-device",
+      link: "/devices/brain-mapping",
     },
   ];
 
