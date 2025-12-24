@@ -26,8 +26,8 @@ export default function DescriptionOnly({
   };
 
   return (
-    <section className={`py-6 bg-transparent ${className}`}>
-      <div className="max-w-4xl mx-auto px-6 text-gray-700 leading-relaxed space-y-2">
+    <section className={`py-2 bg-transparent ${className}`}>
+      <div className="max-w-4xl mx-auto px-6 text-gray-700 leading-relaxed space-y-0">
         {Array.isArray(description)
           ? description.map(renderText)
           : renderText(description, 0)}
