@@ -82,7 +82,7 @@ const page = () => {
 ]}
 />
 
-     <DevicePointsSection  title="HOW TO PURCHASE" 
+     <DevicePointsSection className="mb-12" title="HOW TO PURCHASE" 
     points={[  "Through packages " ]}/>
 
     </>
