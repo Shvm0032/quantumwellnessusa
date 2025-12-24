@@ -13,14 +13,14 @@ export default function DeviceUniquePoints({
         
         {/* Main Heading */}
         {title && (
-          <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-1 text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-4 text-gray-900">
             {title}
           </h2>
         )}
 
         {/* Sub Heading */}
         {subtitle && (
-          <p className="text-base md:text-md text-gray-600 italic  mb-4">
+          <p className=" text-gray-700   mb-4">
             {subtitle}
           </p>
         )}
