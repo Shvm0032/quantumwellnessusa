@@ -10,7 +10,7 @@ export default function DevicesCards() {
     { title: "cryowave", img: "/devices/devices-img/device-img-4.jpeg", link: "/devices/cryowave" },
     { title: "flexforce", img: "/devices/devices-img/device-img-5.jpeg", link: "/devices/flexforce" },
     { title: "infrared sauna", img: "/devices/devices-img/device-img-6.jpeg", link: "/devices/infrared-sauna" },
-    { title: "Nanovi", img: "/devices/devices-img/device-img-7.jpeg", link: "/devices/nanovi" },
+    // { title: "Nanovi", img: "/devices/devices-img/device-img-7.jpeg", link: "/devices/nanovi" },
     { title: "red light therapy", img: "/devices/devices-img/device-img-8.jpeg", link: "/devices/red-light-therapy" },
     { title: "PEMF", img: "/devices/devices-img/device-img-9.jpeg", link: "/devices/pemf" },
     { title: "PNOE", img: "/devices/devices-img/device-img-10.png", link: "/devices/pnoe" },
